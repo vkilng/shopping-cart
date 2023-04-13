@@ -1,0 +1,127 @@
+#root>div:has(> .shop) {
+    height: 100vh;
+}
+
+.shop {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    overflow-y: hidden;
+}
+
+.shop .sidebar {
+    background-color: #84cc16;
+    height: 100%;
+    display: grid;
+    align-content: space-between;
+}
+
+.shop .sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 3vw 1vw;
+}
+
+.shop .sidebar a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    width: 80%;
+    padding: 2vw 2vw;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.shop .sidebar li:hover {
+    background-color: #65a30d;
+}
+
+.shop .sidebar li.highlight {
+    background-color: #a3e635;
+    border-right: 0.5vw solid white;
+}
+
+button.clear-cart {
+    outline: none;
+    border: none;
+    margin: 2vw;
+    padding: 1vw;
+    border-radius: 1vw;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.clear-cart:hover {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+
+.shop .main-content {
+    padding: 2vw;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    overflow-y: scroll;
+}
+
+.shop .item-card {
+    background-color: #e5e7eb;
+    border-radius: 2vw;
+    padding: 1vw;
+    height: fit-content;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 0.5vw;
+    grid-template-rows: 14vw auto auto;
+}
+
+.shop .item-card.selected {
+    background-color: #a3e635;
+}
+
+.item-img {
+    border-radius: 2vw;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../assets/inventory_2_GIcon.png);
+    background-color: white;
+}
+
+.item-counter {
+    display: flex;
+    width: calc(100% - 10vw);
+    justify-content: space-evenly;
+    gap: 0.2vw;
+    padding: 0.5vw 1vw;
+    border: 0.2vw solid #cbd5e1;
+    border-radius: 1vw;
+    user-select: none;
+}
+
+.shop .item-card.selected .item-counter {
+    background-color: #cbd5e1;
+}
+
+.increment,
+.decrement {
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    padding: 0 0.2vw;
+    border-radius: 0.5vw;
+}
+
+.increment:hover,
+.decrement:hover {
+    background-color: #94a3b8;
+}
+
+.item-count {
+    padding: 0 1vw;
+}

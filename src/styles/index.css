@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: calc(1vw + 2vh);
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto min-content;
+}
+
+#root>div {
+  display: grid;
+  grid-template-rows: min-content auto;
+  height: 100%;
+}
+
+.navbar {
+  background-color: black;
+  padding: 2vw 7vw 2vw 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5vw;
+}
+
+.navbar a,
+.navbar .profile-pic,
+.navbar .signout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.navbar .profile-pic {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar a[href='/']:hover,
+.navbar a[href='/shop']:hover,
+.navbar a[href='/cart'] i:hover {
+  color: #0c4a6e !important;
+}
+
+.navbar a[href='/'] i {
+  font-size: 2rem;
+  transform: rotate(-35deg) translateY(-0.2rem);
+}
+
+.navbar .profile-pic i {
+  font-size: 1.3rem;
+  font-variation-settings: 'FILL' 1;
+}
+
+.navbar a[href='/checkout'] i {
+  font-size: 1.3rem;
+  font-variation-settings: 'FILL' 1;
+}
+
+.navbar .cart-count {
+  font-size: 0.6rem;
+  font-weight: bold;
+  background-color: #0c4a6e;
+  border-radius: 50%;
+  text-align: center;
+  width: 1.4rem;
+  line-height: 1.4rem;
+  position: relative;
+  bottom: 0.7rem;
+  right: 0.5rem;
+}
+
+.main-content {
+  padding: 5vw;
+}
+
+/* footer */
+footer {
+  background-color: #27272a;
+  color: white;
+  padding: 1vw 4vw;
+  gap: 0.8vw;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+footer a {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  width: 2vw;
+  height: 2vw;
+}
+
+footer img:hover {
+  animation: wiggly 2s infinite;
+}
+
+@keyframes wiggly {
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(1080deg) scale(1);
+  }
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0.5vw;
+  border-radius: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: #cbd5e1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #737373;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

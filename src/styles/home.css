@@ -1,0 +1,62 @@
+.home .main-content div {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home .main-content article {
+  padding: 1vw 0;
+}
+
+.home .main-content a,
+.home .main-content button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #475569;
+  color: #cbd5e1;
+  padding: 1vw 2vw;
+  border-radius: 1vw;
+  font-weight: bold;
+}
+
+.home .main-content button {
+  display: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin: 1vw 0;
+}
+
+.home .main-content a:hover,
+.home .main-content button:hover {
+  color: white;
+}
+
+.home .review-section {
+  padding: 3vw 5vw;
+  background-color: #e7e5e4;
+  display: grid;
+  justify-items: center;
+}
+
+.home .review-section>div {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2vw;
+  margin: 2vw 0;
+}
+
+.home .review-card {
+  padding: 2vw;
+  background-color: #475569;
+  color: #cbd5e1;
+  border-radius: 2vw;
+  display: grid;
+  align-content: space-between;
+  font-size: 0.8rem;
+}
+
+.home .review-card .author {
+  justify-self: end;
+  margin: 0 2vw;
+}
